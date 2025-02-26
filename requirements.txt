@@ -7,5 +7,4 @@ wtforms-sqlalchemy
 streamlit
 pandas
 numpy
-sqlite3
 requests
