@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eligible Scholarships</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+
+    <h2>Eligible Scholarships</h2>
+
+    {% if scholarships %}
+        <ul>
+            {% for scholarship in scholarships %}
+                <li>
+                    <strong>{{ scholarship.name }}</strong><br>
+                    Income Limit: ₹{{ scholarship.income_limit }}<br>
+                    Minimum Required Percentage: {{ scholarship.percentage_required }}%<br>
+                    Eligible Community: {{ scholarship.community }}
+                </li>
+                <br>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No scholarships available for your criteria.</p>
+    {% endif %}
+
+    <br>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+
+</body>
+</html>
