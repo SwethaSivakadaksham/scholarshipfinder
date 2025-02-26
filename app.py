@@ -170,4 +170,8 @@ def delete_scholarship(id):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(debug=True)
+    #app.run(debug=True)
+import streamlit as st
+
+st.title("Scholarship Finder App")
+st.write("Your Flask backend should run separately, and Streamlit will handle the UI.")
