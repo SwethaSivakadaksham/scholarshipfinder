@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Scholarship</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <header class="college-header">
+        <img src="logo.png" alt="SDNB Vaishnav College Logo" class="college-logo">
+        <h1>SDNB Vaishnav College for Women</h1>
+    </header>
+
+    <h2>Add Scholarship</h2>
+
+    <form method="POST">
+        <label>Scholarship Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Income Limit:</label><br>
+        <input type="number" name="income_limit" required><br><br>
+
+        <label>Percentage Required:</label><br>
+        <input type="number" name="percentage_required" required><br><br>
+
+        <label>Community:</label><br>
+        <select name="community" required>
+            <option value="General">General</option>
+            <option value="OC">OC</option>
+            <option value="BC">BC</option>
+            <option value="MBC">MBC</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+            <option value="ALL">ALL</option>
+
+        </select><br><br>
+
+        <button type="submit">Add Scholarship</button>
+    </form>
+
+    <br>
+    <a href="{{ url_for('admin_dashboard') }}">Back to Admin Dashboard</a>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Scholarship Finder</h1>
+        <form method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="annual_income">Annual Income</label>
+            <input type="number" id="annual_income" name="annual_income" required>
+
+            <label for="year_of_study">Year of Study</label>
+            <select id="year_of_study" name="year_of_study">
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+            </select>
+
+            <label for="percentage">Percentage</label>
+            <input type="number" id="percentage" name="percentage" required>
+
+            <label for="community">Community</label>
+            <select id="community" name="community">
+                <option value="General">General</option>
+                <option value="OBC">OBC</option>
+                <option value="SC">SC</option>
+                <option value="ST">ST</option>
+                <option value="EWS">EWS</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <button type="submit">Find Scholarships</button>
+        </form>
+    </div>
+</body>
+</html>

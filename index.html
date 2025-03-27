@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scholarship Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h2>Welcome to the Scholarship Finder</h2>
+    <a href="{{ url_for('login') }}">Login</a> |
+    <a href="{{ url_for('register') }}">Register</a> |
+    <a href="{{ url_for('admin_login') }}">Admin Login</a>
+</body>
+</html>

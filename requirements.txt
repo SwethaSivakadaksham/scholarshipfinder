@@ -1,0 +1,10 @@
+flask
+flask_sqlalchemy
+flask_login
+flask_wtf
+wtforms
+wtforms-sqlalchemy
+streamlit
+pandas
+numpy
+requests

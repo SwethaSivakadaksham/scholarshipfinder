@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <header class="college-header">
+        <img src="logo.png" alt="SDNB Vaishnav College Logo" class="college-logo">
+        <h1>SDNB Vaishnav College for Women</h1>
+    </header>
+    <h2>Admin Dashboard</h2>
+
+    <h3>Scholarships</h3>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Income Limit</th>
+            <th>Percentage Required</th>
+            <th>Community</th>
+            <th>Action</th>
+        </tr>
+        {% for scholarship in scholarships %}
+        <tr>
+            <td>{{ scholarship.name }}</td>
+            <td>{{ scholarship.income_limit }}</td>
+            <td>{{ scholarship.percentage_required }}%</td>
+            <td>{{ scholarship.community }}</td>
+            <td><a href="{{ url_for('delete_scholarship', id=scholarship.id) }}" style="color: red;">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="{{ url_for('add_scholarship') }}">Add Scholarship</a> |
+    <a href="{{ url_for('admin_logout') }}">Logout</a>
+
+</body>
+</html>
